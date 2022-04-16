@@ -82,3 +82,9 @@
 .register__go_login {
     text-align: center;
 }
+
+.register__go_link {
+    color: #1DA1F2;
+    font-weight: bold;
+    cursor: pointer;
+}

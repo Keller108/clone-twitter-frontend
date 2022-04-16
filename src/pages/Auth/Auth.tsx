@@ -1,25 +1,25 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 import './Auth.css';
 import LOGO_PATH from '../../images/twitter-logo.svg';
 import { Button } from '../../shared/Button';
 import { Register } from '../../features/Register';
-import { useState } from 'react';
 
 export function Auth() {
-    const [popupVis, setPopupVis] = useState(false);
+    const [isLogin, setIsLogin] = useState(false);
     const navigate = useNavigate();
 
     const goToMain = () => {
         navigate('/');
     };
 
-    const openPopup = () => {
-        setPopupVis(true);
+    const openLogin = () => {
+        setIsLogin(true);
     };
 
-    const closePopup = () => {
-        setPopupVis(false);
+    const closeLogin = () => {
+        setIsLogin(false);
     };
 
     return (
@@ -33,11 +33,11 @@ export function Auth() {
                             Присоединиться к нашей социальной сети
                         </h1>
                         <Button className="button_size_medium button_type_primary mb_15" btnText="Войти" action={goToMain} />
-                        <Button className="button_size_medium button_type_secondary" btnText="Регистрация" action={openPopup} />
+                        <Button className="button_size_medium button_type_secondary" btnText="Регистрация" action={openLogin} />
                     </div>
                 </div>
             </div>
-            <Register visible={popupVis} closePopup={closePopup}/>
+            <Register visible={isLogin} closePopup={closeLogin}/>
         </>
     )
 }
