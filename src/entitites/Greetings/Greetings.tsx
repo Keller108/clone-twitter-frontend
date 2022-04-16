@@ -6,12 +6,21 @@ import './Greetings.css';
 
 interface IRegister {
     visible: boolean;
+    isLogin: boolean;
+    setIsLogin: (value: boolean) => void;
+    setIsRegister: (value: boolean) => void;
+    isRegister: boolean;
     closePopup: (popupVis: boolean) => void;
 }
 
-export function Greetings({visible, closePopup}: IRegister) {
-    const [isLogin, setIsLogin] = useState(true);
-    const [isRegister, setIsRegister] = useState(false);
+export function Greetings({
+    visible,
+    isLogin,
+    setIsLogin,
+    isRegister,
+    setIsRegister,
+    closePopup
+}: IRegister) {
     let className = visible === true ? "greetings greetings_visible" : "greetings";
 
     const navigate = useNavigate();
@@ -49,7 +58,7 @@ export function Greetings({visible, closePopup}: IRegister) {
 
     let popupForm: any = [];
 
-    if (isLogin) {
+    if (isRegister === true && isLogin === false) {
         popupForm = [
             <PopupForm
                 title="Регистрация"
@@ -60,7 +69,7 @@ export function Greetings({visible, closePopup}: IRegister) {
                 btnAction={handleShowPopup}
                 submitAction={handleApply}
             />
-        ]} else if (isRegister) {
+        ]} else if (isLogin === true && isRegister === false) {
             popupForm = [
                 <PopupForm
                     title="Авторизация"

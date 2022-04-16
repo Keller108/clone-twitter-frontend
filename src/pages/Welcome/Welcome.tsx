@@ -7,13 +7,25 @@ import { Greetings } from '../../entitites/Greetings';
 
 export function Welcome() {
     const [greetings, openGreetings] = useState(false);
+    const [isLogin, setIsLogin] = useState(false);
+    const [isRegister, setIsRegister] = useState(false);
 
-    const openPopup = () => {
+    const openLoginPopup = () => {
         openGreetings(true);
+        setIsLogin(true);
+        setIsRegister(false);
+    };
+
+    const openRegisterPopup = () => {
+        openGreetings(true);
+        setIsRegister(true);
+        setIsLogin(false);
     };
 
     const closeGreetings = () => {
         openGreetings(false);
+        setIsRegister(false);
+        setIsLogin(false);
     };
 
     return (
@@ -26,11 +38,18 @@ export function Welcome() {
                         Клон Twitter ;)
                         Присоединяйся
                     </h1>
-                    <Button className="button_size_medium button_type_primary mb_15" btnText="Войти" action={openPopup} />
-                    <Button className="button_size_medium button_type_secondary" btnText="Регистрация" action={openPopup} />
+                    <Button key='Войти' className="button_size_medium button_type_primary mb_15" btnText="Войти" action={openLoginPopup} />
+                    <Button key='Регистрация' className="button_size_medium button_type_secondary" btnText="Регистрация" action={openRegisterPopup} />
                 </div>
             </div>
-            <Greetings visible={greetings} closePopup={closeGreetings}/>
+            <Greetings
+                visible={greetings}
+                isLogin={isLogin}
+                setIsLogin={setIsLogin}
+                isRegister={isRegister}
+                setIsRegister={setIsRegister}
+                closePopup={closeGreetings}
+            />
         </div>
     )
 }
