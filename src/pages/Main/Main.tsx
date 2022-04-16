@@ -1,3 +1,4 @@
+import { Post } from '../../entitites/Post';
 import { Twitter } from '../../features/Twitter';
 import { Logo } from '../../shared/Logo';
 import './Main.css';
@@ -15,6 +16,7 @@ export function Main() {
                     <h1 className="main__title">Home</h1>
                 </div>
                 <Twitter />
+                <Post />
             </main>
             <div className="main__news-container">
                 News

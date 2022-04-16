@@ -33,6 +33,7 @@
     padding: 10px 0;
     border-left: 1px solid #EBEEF0;
     border-right: 1px solid #EBEEF0;
+    background-color: #F7F9FA;
 }
 
 .main__title-container {
@@ -43,6 +44,7 @@
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid #EBEEF0;
+    background-color: white;
 }
 
 .main__title {

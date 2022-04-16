@@ -1,6 +1,8 @@
 .twitter {
     display: flex;
     flex-direction: row;
+    border-bottom: 1px solid #EBEEF0;
+    background-color: white;
 }
 
 .twitter__avatar-container {
