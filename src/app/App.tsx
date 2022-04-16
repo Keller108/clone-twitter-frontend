@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Auth } from '../pages/Auth/Auth';
+import { Welcome } from '../pages/Welcome/Welcome';
 import { Main } from '../pages/Main/Main';
 
 import './App.css';
@@ -10,7 +10,7 @@ export function App() {
         <div className="app">
             <Routes>
                 <Route path="/" element={<Main/>} />
-                <Route path="/auth" element={<Auth/>} />
+                <Route path="/welcome" element={<Welcome/>} />
             </Routes>
         </div>
     </BrowserRouter>
