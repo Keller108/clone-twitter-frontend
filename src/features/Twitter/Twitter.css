@@ -1,0 +1,122 @@
+.twitter {
+    display: flex;
+    flex-direction: row;
+}
+
+.twitter__avatar-container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.twitter__avatar-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    font-size: 0;
+    margin: 0;
+}
+
+.twitter__content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 20px 20px 10px 0;
+}
+
+.twitter__input {
+    height: auto;
+    resize: none;
+    outline: none;
+    padding: 14px;
+}
+
+.twitter__input::placeholder {
+    font-size: 12px;
+    color: #5B7083;
+}
+
+.twitter__action-container {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.twitter__functional-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.twitter__functional-item {
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.twitter__functional-item:last-of-type {
+    margin-right: 0;
+}
+
+.twitter__functional-btn {
+    width: 24px;
+    height: 24px;
+    outline: none;
+    border: none;
+    background-image: unset;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+}
+
+.twitter__functional-btn_type_image {
+    background-image: url("./icons/icon_image.svg");
+}
+
+.twitter__functional-btn_type_gif {
+    background-image: url("./icons/icon_gif.svg");
+}
+
+.twitter__functional-btn_type_ask {
+    background-image: url("./icons/icon_ask.svg");
+}
+
+.twitter__functional-btn_type_smile {
+    background-image: url("./icons/icon_smile.svg");
+}
+
+.twitter__functional-btn_type_date {
+    background-image: url("./icons/icon_date.svg");
+}
+
+.twitter__twit-btn {
+    width: 78px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    background-color: #8ED0F8;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+}
+
+.twitter__twit-btn:hover {
+    background-color: #1DA1F2;
+}
