@@ -30,9 +30,32 @@
     width: 45%;
     /* max-width: 600px; */
     height: auto;
-    padding: 20px;
+    padding: 10px 0;
     border-left: 1px solid #EBEEF0;
     border-right: 1px solid #EBEEF0;
+}
+
+.main__title-container {
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #EBEEF0;
+}
+
+.main__title {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    background-image: url("../../images/icon_stars.png");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 .main__news-container {
