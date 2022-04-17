@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
+    border-bottom: 1px solid #EBEEF0;
 }
 
 .post__header {
@@ -80,4 +81,84 @@
     object-position: center;
     font-size: 0;
     border-radius: 14px;
+}
+
+.post__action-list {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 5px 60px;
+    list-style-type: none;
+}
+
+.post__action-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.post__action-btn {
+    width: 18px;
+    height: 18px;
+    outline: none;
+    border: none;
+    font-size: 0;
+    background-image: unset;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.post__action-btn_type_comment {
+    background-image: url("./icons/icon_comment.svg");
+}
+
+.post__action-btn_type_comment:active {
+    background-image: url("./icons/icon_comment_active.svg");
+}
+
+.post__action-btn_type_retweet {
+    background-image: url("./icons/icon_retweet.svg");
+}
+
+.post__action-btn_type_retweet:active {
+    background-image: url("./icons/icon_retweet_active.svg");
+}
+
+.post__action-btn_type_heart {
+    background-image: url("./icons/icon_heart.svg");
+}
+
+.post__action-btn_type_heart:active {
+    background-image: url("./icons/icon_heart_active.svg");
+}
+
+.post__action-btn_type_share {
+    background-image: url("./icons/icon_share.svg");
+}
+
+.post__action-btn_type_share:active {
+    background-image: url("./icons/icon_share_active.svg");
+}
+
+.post__action-counter {
+    font-size: 13px;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.post__show-thread {
+    font-size: 13px;
+    color: #1DA1F2;
+    line-height: 1.4;
+    margin-top: 15px;
+    margin-left: 58px;
+    cursor: pointer;
 }
