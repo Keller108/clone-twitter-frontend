@@ -38,6 +38,8 @@
     resize: none;
     outline: none;
     padding: 14px;
+    border: 1px solid #EBEEF0;
+    border-radius: 10px;
 }
 
 .twitter__input::placeholder {

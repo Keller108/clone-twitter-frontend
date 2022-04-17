@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { observer } from 'mobx-react-lite';
+
 import { Welcome } from '../pages/Welcome/Welcome';
 import { Main } from '../pages/Main';
-
 import './App.css';
 
-export function App() {
+export const App = observer(() => {
   return (
     <BrowserRouter>
         <div className="app">
@@ -15,4 +16,4 @@ export function App() {
         </div>
     </BrowserRouter>
   );
-}
+});

@@ -1,13 +1,16 @@
+import { observer } from 'mobx-react-lite';
+
 import { Post } from '../../entitites/Post';
 import { Twitter } from '../../features/Twitter';
 import { Logo } from '../../shared/Logo';
 import './Main.css';
-import { USER_AVA_PATH_1} from '../../shared/const/PostConst/PostConst';
-import { USER_AVA_PATH_2} from '../../shared/const/PostConst/PostConst';
-import { POST_ENTITY_1} from '../../shared/const/PostConst/PostConst';
-import { POST_ENTITY_2} from '../../shared/const/PostConst/PostConst';
 
-export function Main() {
+import { USER_AVA_PATH_1,
+    USER_AVA_PATH_2,
+    POST_ENTITY_1,
+    POST_ENTITY_2 } from '../../shared/const/PostConst/PostConst';
+
+export const Main = observer(() =>{
   return (
     <div className="main">
         <div className="main__container">
@@ -29,4 +32,4 @@ export function Main() {
         </div>
     </div>
   )
-}
+});
